@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ison自制迷宫游戏</title>
+	<style type="text/css">
+		h1{text-align: center; color: #fff;}
+		#mask, #canvas{width: 505px; height: 505px; background-color: #FAFAD2; position: absolute; left: 50%; top: 150px; transform: translate(-50%, 0);border: 1px solid #EEE8AA; border-radius: 10px;}
+		#canvas{display: block;}
+		#restart{margin: 0 auto; margin-top: 20px; width: 140px; height: 50px; border-radius: 10px; text-align: center; line-height: 50px; font-size: 20px; background-color: #1E90FF; color: #fff; cursor: pointer;}
+		#restart:hover{background-color: #00BFFF;}
+		#msg, #fail{display: none; position: fixed; width: 300px; height: 100px; border-radius: 10px; border: 1px solid #696969; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; line-height: 100px; font-size: 20px; background-color: #F0FFF0;/* transition: all 0.5s ease; opacity: 0;*/ }
+		#fail a{display: block; width: 120px; height: 30px; font-size: 12px; border-radius: 5px; background-color: #B22222; position: absolute; bottom: 10px; right: 100px; text-align: center; line-height: 30px; color: #fff; font-weight: bold; cursor: pointer;}
+		#fail a:hover{background-color: #CD5C5C;}
+		#clock{display: none; position: fixed; width: 200px; height: 60px; top: 80px; left: 20%; transform: translate(-50%, 0); border: 1px solid #CD5555; border-radius: 5px; background-color: #FAFAD2; /*transition: all 0.5s ease; opacity: 0;*/ font-size: 30px; text-align: center; line-height: 60px;}
+		/*#mark{width: 100%; height: 100%; background-color: #000; opacity: 0.56;}*/
+	</style>
+</head>
+<body style="background-color: black;">
+	<h1>迷宫</h1>
+	<div id="clock"></div>
+	<div id="mask"></div>
+	<canvas id="canvas">
+		您的浏览器目前尚不支持canvas
+	</canvas>
+	<div id="restart">开始</div>
+	<!-- <div id="mark"></div> -->
+	<div id="msg">Congratulations! You Win!</div>
+	<div id="fail">Sorry! You Fail!<a>Try Again</a></div>
+
+	<script type="text/javascript" src="maze.js"></script>
+</body>
+</html>
